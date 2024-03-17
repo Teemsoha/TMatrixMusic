@@ -33,12 +33,12 @@ def get_file_id(msg: Message):
                 return obj
 
 @app.on_message(
-    command(["المطور","مطوره","دارك","مطور السورس","مبرمج السورس"])
+    command(["المطور","اسحاق","اليسع","مطور السورس","مبرمج السورس"])
     & filters.group
   
 )
 async def yas(client, message):
-    usr = await client.get_chat("T4_Mohamed")
+    usr = await client.get_chat("Mjtre7")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"– – – – – – – – – – – – – – – – – –\n↯︙𝖣𝖾𝗏 ↬ ⦗ {name} ⦘\n↯︙𝖴𝗌𝖤𝗋 ↬ ⦗ @{usr.username} ⦘\n↯︙𝖨𝖣 ↬ ⦗ {usr.id} ⦘\n↯︙𝖡𝗂𝖮 ↬ ⦗ {usr.bio} ⦘\n– – – – – – – – – – – – – – – – – –",  
@@ -53,12 +53,12 @@ async def yas(client, message):
     )
     
 @app.on_message(
-    command(["مارش"])
+    command(["لبيه"])
     & filters.group
   
 )
 async def yas(client, message):
-    usr = await client.get_chat("Marshmello_x_x")
+    usr = await client.get_chat("My1mind1")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"– – – – – – – – – – – – – – – – – –\n↯︙𝖣𝖾𝗏 ↬ ⦗ {name} ⦘\n↯︙𝖴𝗌𝖤𝗋 ↬ ⦗ @{usr.username} ⦘\n↯︙𝖨𝖣 ↬ ⦗ {usr.id} ⦘\n↯︙𝖡𝗂𝖮 ↬ ⦗ {usr.bio} ⦘\n– – – – – – – – – – – – – – – – – –",  
@@ -78,19 +78,19 @@ async def yas(client, message):
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/7a4ea9510adbff3564608.jpg",
-        caption=f"""↯︙اهلا بك عزيزي {message.from_user.mention}\n↯︙مطورين سورس دارك ميوزك""",
+        photo=f"https://telegra.ph/file/5e261225b0770e4888ef7.jpg",
+        caption=f"""↯︙اهلا بك عزيزي {message.from_user.mention}\n↯︙مطورين سورس دينا ميوزك""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "‹ : 𝗗𝗘𝗩 𝐷𝐴𝑅𝐾 : ›", url=f"https://t.me/T4_Mohamed"), 
+                        "‹ : ᯓ ˹ أليسع .↓ : ›", url=f"https://t.me/Mjtre7"), 
                  ],[
                     InlineKeyboardButton(
-                        "‹ :مـًٌٍّ̨̥̬̩ـمـ༈ۖ҉ـآرٍشـًٌٍّ̨̥̬̩ـمـًٌٍّ̨̥̬̩ـيلُـِـِِـِِِؤ❾ فـ༈ۖ҉ـء : ›", url=f"https://t.me/Marshmello_x_x"),
+                        "‹ :ليطمـ𓆰ٰ⍣⃟ٰٰٖٖ۪۬🇾🇪۬ـئن عقلـ۬ۦٕ٘۬ﹻٰ۬ۛۛـي : ›", url=f"https://t.me/My1mind1"),
                 ],[
                     InlineKeyboardButton(
-                        "‹ : 𝚂𝙾𝚄𝚁𝙲𝙴 𝙳𝙰𝚁𝙺 : ›", url=f"https://t.me/k_40_x"),
+                        "‹ : 𝚂𝙾𝚄𝚁𝙲𝙴  : ›", url=f"https://t.me/My1mind1"),
                 ],
 
             ]
