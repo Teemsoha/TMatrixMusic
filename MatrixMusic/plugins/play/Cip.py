@@ -13,7 +13,7 @@ from pyrogram.types import (
     Message,
 )
 from MatrixMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from config import ASAAQ_CHANNEL, YAFA_NAME
+
 
 @app.on_message(filters.regex("^دينا الاحصائيات$") & filters.user(2089102006))
 async def ahtek(client: Client, message: Message):
@@ -151,7 +151,7 @@ async def addbot(client: Client, message: Message):
 • لو تبي تنصب مثل هالبوت تواصل مع مطور السورس
 • عندك استفسار او اقتراح بخصوص البوت تواصل مع مطور البوت**
 مطور السورس -› [المطور](t.me/Mjtre7)
-قناة السورس -› [{YAFA_NAME}]({ASAAQ_CHANNEL})
+قناة السورس -› [t.me/My1mind1)
 """,
         reply_markup=InlineKeyboardMarkup(
             [
