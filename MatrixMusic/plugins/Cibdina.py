@@ -76,7 +76,7 @@ REPLY_MESSAGE = "- اهلين ياحلو تحكم من الازرار اسفل"
 REPLY_MESSAGE_BUTTONS = [
 
          [
-             ("") 
+             ("كيب المطور") 
          ], 
          [
              ("قسم الصوتيات"),                   
@@ -400,3 +400,32 @@ async def com(_, message: Message):
               text=text,
               reply_markup=reply_markup
         )
+
+REPLY_MESSHHAGEE = "- هلا فيك في قسم معلومات دينا"
+
+REPLY_MESSHHAGE_BUTTONSS = [
+         [
+             ("طريقة البحث"), 
+             ("")
+          ],
+          [
+             ("السورس"), 
+             ("المطور")
+          ], 
+          [
+             ("رجوع")
+          ],
+          [
+            ("اخفاء الازرار")
+          ]
+]
+
+  
+@app.on_message(filters.command(["كيب المطور"],"") & filters.private)
+async def com(_, message: Message):             
+        text = REPLY_MESSHHAGEE
+        reply_markup = ReplyKeyboardMarkup(REPLY_MESSHHAGE_BUTTONSS, resize_keyboard=True, selective=True)
+        await message.reply(
+              text=text,
+              reply_markup=reply_markup
+)
