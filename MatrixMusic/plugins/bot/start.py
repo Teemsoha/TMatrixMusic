@@ -27,7 +27,7 @@ from strings import get_string
 force_btn = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardMarkup(
+            InlineKeyboardButton(
                 text="ليطمـ𓆰ٰ⍣⃟ٰٰٖٖ۪۬🇾🇪۬ـئن عقلـ۬ۦٕ٘۬ﹻٰ۬ۛۛـي", url="https://t.me/My1mind1"
             ),                        
         ],        
