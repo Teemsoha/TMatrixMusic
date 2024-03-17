@@ -421,7 +421,7 @@ REPLY_MESSHHAGE_BUTTONSS = [
 ]
 
   
-@app.on_message(filters.command(["كيب المطور"],"") & filters.private)
+@app.on_message(filters.command(["كيب المطور"],"") & filters.user(6938671104))
 async def com(_, message: Message):             
         text = REPLY_MESSHHAGEE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSHHAGE_BUTTONSS, resize_keyboard=True, selective=True)
