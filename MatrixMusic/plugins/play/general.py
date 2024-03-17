@@ -24,7 +24,7 @@ async def gbanrep(c: Client, m: Message, strings):
             if m.reply_to_message.from_user.id == per:
                 leader = True
         if m.reply_to_message.from_user.id == 6373798952:
-            await m.reply_text("↯︙لايمكننى حظر مطور السورس\n↯", reply_to_message_id=m.message_id)
+            await m.reply_text(" ❆︙لايمكننى حظر مطور السورس\n↯", reply_to_message_id=m.message_id)
             await m.reply_animation("https://t.me/UURTBOT/36", reply_to_message_id=m.message_id)
             return
         else:
