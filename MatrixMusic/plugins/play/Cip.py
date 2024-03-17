@@ -1,6 +1,7 @@
 import asyncio
 from pyrogram import Client, filters
-from strings import get_command
+from MatrixMusic.plugins.play.filters import command
+from pyrogram import filters
 from MatrixMusic.utils.decorators import AdminActual
 from pyrogram.types import (
     CallbackQuery,
@@ -47,7 +48,7 @@ async def delet(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.command("نادي المطور", [".", ""]) & filters.group)
+@app.on_message(command("نادي المطور", [".", ""]) & filters.group)
 async def kstr(client: Client, message: Message):
        chat = message.chat.id
        gti = message.chat.title
@@ -121,7 +122,7 @@ async def down(client, message):
           m = await message.reply("**- ابشر تم اخفاء الازرار بنجاح\n- لو تبي تطلعها مرة ثانية اكتب /start **", reply_markup= ReplyKeyboardRemove(selective=True))
 
 
-@app.on_message(filters.command(["كيفية استخدام دينا"],"") & filters.private)
+@app.on_message(command(["كيفية استخدام دينا"]) & filters.private)
 async def addbot(client: Client, message: Message):
     await message.reply_text(f"""- **هلا والله ياعيني عشان تفعل بوت دينا اتبع الخطوات الي بالاسفل**
 1 • ارفعه مشرف بكل الصلاحيات 
