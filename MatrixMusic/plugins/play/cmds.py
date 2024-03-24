@@ -10,14 +10,14 @@ from MatrixMusic import app
 from config import OWNER_ID, LOGGER_ID
 
 
-@app.on_message(command(["ميوزك", "اوامر", "الاوامر"]))
+@app.on_message(command(["ميوزك", "تفعيل", "الاوامر"]))
 async def zdatsr(client: Client, message: Message):
     usr = await client.get_users(OWNER_ID)
     name = usr.first_name
     usrnam = usr.username
     await message.reply_photo(
         photo=f"https://telegra.ph/file/a3f0b02ae0a5f2374d909.jpg",
-        caption=f"""<b> ❆︙مرحباً بك عزيزي</b>\n<b>↯︙استخدم الازرار بالاسفل\n» ل تصفح اوامر الميوزك</b>""",
+        caption=f"""<b> ❆︙مرحباً بك عزيزي</b>\n\n<b>❆︙استخدم الازرار بالاسفل ل تصفح اوامر الميوزك</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
