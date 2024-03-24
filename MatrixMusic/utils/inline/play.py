@@ -65,6 +65,7 @@ def stream_markup_timer(_, chat_id, played, dur):
                 callback_data="GetTimer",
             )
         ],
+        [InlineKeyboardButton(text=_["PL_B_2"], switch_inline_query_current_chat="")],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
         [InlineKeyboardButton(text=_["MATRIX_BUTTON"], url=f"https://t.me/My1mind1")], 
     ]
@@ -78,6 +79,7 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text=" 𝅘𝅥𝅮 ", callback_data=f"ADMIN Replay|{chat_id}"),
             InlineKeyboardButton(text="تخــ۫͜ـطُي", callback_data=f"ADMIN Skip|{chat_id}"),
         ],
+        [InlineKeyboardButton(text=_["PL_B_2"], switch_inline_query_current_chat="")],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
         [InlineKeyboardButton(text=_["MATRIX_BUTTON"], url=f"https://t.me/My1mind1")], 
     ]
