@@ -167,7 +167,7 @@ REPLY_MESSAGEE = "- هلا فيك في قسم معلومات ريماگس"
 REPLY_MESSAGE_BUTTONSS = [
          [
              ("طريقة البحث"), 
-             ("")
+             ("الزخرفــة")
           ],
           [
              ("السورس"), 
@@ -306,14 +306,33 @@ async def dowmmr(client: Client, message: Message):
                         "", url=f"https://t.me/Mlze1bot"),
                 ],[
                     InlineKeyboardButton(
-                        "• ضيفني لقروبك 🎻", url=f"https://t.me/KAN6_bot?startgroup=true"),
+                        "• ضيفني لقروبك 🎻", url=f"https://t.me/A_I_S_Sbot?startgroup=true"),
                 ],
             ]
         ),
         disable_web_page_preview=True
     )
 
-
+@app.on_message(filters.command(["الزخرفــة"],"") & filters.private)
+async def dowmmr(client: Client, message: Message):
+    await message.reply_text(f"""اهلين فيك في قسم الزخرفة ♪
+لزخرفة أسم عربي او انجليزي استخدم الامر التالي ↓
+[ زخرفه + اسم المطلوب ..]
+مثال -› زخرفه المطور اليسع
+- الامر يشتغل بالمجموعة  .""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "", url=f"https://t.me/Mlze1bot"),
+                ],[
+                    InlineKeyboardButton(
+                        "• ضيفني لقروبك 🎻", url=f"https://t.me/A_I_S_Sbot?startgroup=true"),
+                ],
+            ]
+        ),
+        disable_web_page_preview=True
+                            )
 REPLXCY_MESSAGE = "**- اهلين ياحلو في قسم الصور والخلفيات **"
 
 
