@@ -7,7 +7,6 @@ import re
 from cgi import print_arguments
 from pyrogram import Client, filters
 from config import BANNED_USERS
-from strings import get_command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from MatrixMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from datetime import datetime
@@ -17,7 +16,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from MatrixMusic import app
 from MatrixMusic import settingsApp
-from strings import get_command
+
 
     
 disable = []
