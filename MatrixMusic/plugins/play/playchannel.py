@@ -25,7 +25,24 @@ from MatrixMusic.utils.logger import play_logs
 from MatrixMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
+force_btn = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton(
+                text="ليطمـ𓆰ٰ⍣⃟ٰٰٖٖ۪۬🇾🇪۬ـئن عقلـ۬ۦٕ٘۬ﹻٰ۬ۛۛـي", url="https://t.me/My1mind1"
+            ),                        
+        ],        
+    ]
+)
 
+async def check_is_joined(message):    
+    try:
+        userid = message.from_user.id
+        status = await app.get_chat_member("My1mind1", userid)
+        return True
+    except Exception:
+        await message.reply_text("❆︰ عذراً، عليك الانضمام الى هذهِ القناة أولاً  \n❆︰ اشترك ثم أرسل : شغل + اسم الاغنيه",reply_markup=force_btn)
+        return False
 
 @app.on_message(
     command(
@@ -57,6 +74,8 @@ async def play_commnd(
     url,
     fplay,
 ):
+    if not await check_is_joined(message):
+        return
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
     )
