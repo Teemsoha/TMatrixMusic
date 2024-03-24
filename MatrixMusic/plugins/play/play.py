@@ -42,7 +42,7 @@ async def check_is_joined(message):
         status = await app.get_chat_member("My1mind1", userid)
         return True
     except Exception:
-        await message.reply_text("◇︰ عذراً، عليك الانضمام الى هذهِ القناة أولاً  \n◇︰ اشترك ثم أرسل : شغل + اسم الاغنيه",reply_markup=force_btn)
+        await message.reply_text("<b>❆︰ عذراً، عليك الانضمام الى هذهِ القناة أولاً  </b>\n<b>❆︰ اشترك ثم أرسل : شغل + اسم الاغنيه</b>",reply_markup=force_btn)
         return False
 
 #gooooo
