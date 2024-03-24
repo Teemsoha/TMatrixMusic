@@ -15,13 +15,6 @@ from pyrogram.types import (
 from MatrixMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
 
-@app.on_message(filters.regex("^دينا الاحصائيات$") & filters.user(2089102006))
-async def ahtek(client: Client, message: Message):
-    m_reply = await message.reply_text(f"**✧ اهلين مطوري ارحب\n- هذي احصائيات سهى يا روحي :\n\n-› عدد المشتركين : 12478\n-› عدد المجموعات : 11346\n\n• تم زيادة 1204 مشترك ونقص 2103 مجموعة  في اخر 24 ساعة\n\n- عدد الطرد من بوتات اخرى : 843\n- طرد يدوي : 1302\n\n╼╾**")
-    await m_reply_text("")
-
-
-
 
 @app.on_message(filters.regex("^رابط الحذف$"))
 async def delet(client: Client, message: Message):
@@ -69,7 +62,7 @@ async def kstr(client: Client, message: Message):
     )
 
 
-REPLY_MESSAGE = "- اهلين ياحلو تحكم من الازرار اسفل"
+REPLY_MESSAGE = "-<b> اهلين ياحلو فى قائمة مميزات ريماگـــس </b>\nتحكم من الازرار اسفل"
 
 
 
@@ -82,7 +75,7 @@ REPLY_MESSAGE_BUTTONS = [
          [
              ("قسم الصوتيات"),                   
 
-             ("اوامر دينا")
+             ("اوامر ريماگس")
 
 
 
@@ -108,7 +101,7 @@ REPLY_MESSAGE_BUTTONS = [
 
   
 
-@app.on_message(filters.regex("^/dina$") & filters.private)
+@app.on_message(filters.regex("^/Remax$") & filters.private)
 async def cpanel(_, message: Message):             
         text = REPLY_MESSAGE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, resize_keyboard=True, selective=True)
@@ -119,24 +112,24 @@ async def cpanel(_, message: Message):
 
 @app.on_message(filters.regex("اخفاء الازرار"))
 async def down(client, message):
-          m = await message.reply("**- ابشر تم اخفاء الازرار بنجاح\n- لو تبي تطلعها مرة ثانية اكتب /start **", reply_markup= ReplyKeyboardRemove(selective=True))
+          m = await message.reply("- ابشر تم اخفاء الازرار بنجاح\n- لو تبي تطلعها مرة ثانية اكتب /Remax ", reply_markup= ReplyKeyboardRemove(selective=True))
 
 
 @app.on_message(filters.command(["كيفية استخدام دينا"]) & filters.private)
 async def addbot(client: Client, message: Message):
-    await message.reply_text(f"""- **هلا والله ياعيني عشان تفعل بوت دينا اتبع الخطوات الي بالاسفل**
+    await message.reply_text(f"""- هلا والله ياعيني عشان تفعل بوت ريماگــس اتبع الخطوات الي بالاسفل
 1 • ارفعه مشرف بكل الصلاحيات 
-2 • لو تبي تشوف الاوامر اكتب [ الاوامر ] ولو تبي تشغل على طول اكتب دينا شغلي + اسم المقطع الصوتي
-• مثال : دينا شغلي قالوا عليكي
+2 • لو تبي تشوف الاوامر اكتب [ الاوامر او ميوزك ] ولو تبي تشغل على طول اكتب  شغل + اسم المقطع الصوتي
+• مثال :  شغل قالوا عليكي
 - لو واجهت مشكله كلم مطور البوت ~ @Mjtre7""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                       "𝐥𝐚𝐫𝐞𝐧 𖢳", user_id=6291356554),
+                       "المطور  𖢳", user_id=6218149232),
                 ],[
                     InlineKeyboardButton(
-                        "• ضيفني لقروبك 🎻", url=f"https://t.me/KAN6_bot?startgroup=true"),
+                        "• ضيفني لقروبك 🎻", url=f"https://t.me/A_I_S_Sbot?startgroup=true"),
                 ],
             ]
         ),
@@ -147,9 +140,9 @@ async def addbot(client: Client, message: Message):
 
 @app.on_message(filters.command(["السورس"],"") & filters.private)
 async def addbot(client: Client, message: Message):
-    await message.reply_text(f"""**- اهلين فيك بسورس دينا ياحلو
+    await message.reply_text(f"""- اهلين فيك بسورس ريماكس ياحلو
 • لو تبي تنصب مثل هالبوت تواصل مع مطور السورس
-• عندك استفسار او اقتراح بخصوص البوت تواصل مع مطور البوت**
+• عندك استفسار او اقتراح بخصوص البوت تواصل مع مطور البوت
 مطور السورس -› [المطور](t.me/Mjtre7)
 قناة السورس -› [t.me/My1mind1)
 """,
@@ -157,10 +150,10 @@ async def addbot(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "تحديثات دينا 🍻", url=f"https://t.me/My1mind1"),
+                        "تحديثات ريماگس 🍻", url=f"https://t.me/My1mind1"),
                 ],[
                     InlineKeyboardButton(
-                        "• ضيفني لقروبك 🎻", url=f"https://t.me/?startgroup=true"),
+                        "• ضيفني لقروبك 🎻", url=f"https://t.me/A_I_S_Sbot?startgroup=true"),
                 ],
             ]
         ),
@@ -169,7 +162,7 @@ async def addbot(client: Client, message: Message):
 
 
 
-REPLY_MESSAGEE = "- هلا فيك في قسم معلومات دينا"
+REPLY_MESSAGEE = "- هلا فيك في قسم معلومات ريماگس"
 
 REPLY_MESSAGE_BUTTONSS = [
          [
@@ -189,7 +182,7 @@ REPLY_MESSAGE_BUTTONSS = [
 ]
 
   
-@app.on_message(filters.command(["اوامر دينا"],"") & filters.private)
+@app.on_message(filters.command(["اوامر ريماگس"],"") & filters.private)
 async def com(_, message: Message):             
         text = REPLY_MESSAGEE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONSS, resize_keyboard=True, selective=True)
@@ -199,7 +192,7 @@ async def com(_, message: Message):
         )
 
 
-REPFR_MESSAGEE = "**- هلا فيك في قسم  الاغاني والصوتيات**"
+REPFR_MESSAGEE = "- هلا فيك في قسم  الاغاني والصوتيات"
 
 REPFR_MESSAGEE_BUTTONSS = [
          [
@@ -355,7 +348,7 @@ async def com(_, message: Message):
         )
 
 
-REPFVVYR_MESSAGEE = "**- اهلين ياحلو في قسم الالعاب والتسلية **"
+REPFVVYR_MESSAGEE = "- اهلين ياحلو في قسم الالعاب والتسلية "
 
 REPFVVYR_MESSAGEE_BUTTONSS = [
          [
