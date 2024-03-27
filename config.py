@@ -36,7 +36,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Teemsoha/MatrixMusic",
+    "https://github.com/Teemsoha/TMatrixMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
@@ -101,13 +101,13 @@ command = ["/"]
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/e15b16465f42229456e72.jpg"
+    "START_IMG_URL", "https://telegra.ph/file/c619a4de0d83aff39ecbb.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://telegra.ph/file/3d71d032cd795b9cedd69.jpg"
+    "PING_IMG_URL", "https://telegra.ph/file/c619a4de0d83aff39ecbb.jpg"
 )
 PLAYLIST_IMG_URL = "https://telegra.ph/file/3d71d032cd795b9cedd69.jpg"
-STATS_IMG_URL = "https://telegra.ph/file/4243b80b89cb8f9ffb4a4.jpg"
+STATS_IMG_URL = "https://telegra.ph/file/c619a4de0d83aff39ecbb.jpg"
 TELEGRAM_AUDIO_URL = "https://telegra.ph/file/3d71d032cd795b9cedd69.jpg"
 TELEGRAM_VIDEO_URL = "https://telegra.ph/file/3d71d032cd795b9cedd69.jpg"
 STREAM_IMG_URL = "https://telegra.ph/file/3d71d032cd795b9cedd69.jpg"
