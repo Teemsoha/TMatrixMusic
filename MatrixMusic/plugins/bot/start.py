@@ -40,12 +40,12 @@ async def check_is_joined(message):
         status = await app.get_chat_member("My1mind1", userid)
         return True
     except Exception:
-        await message.reply_text("◇︰ عذراً، عليك الانضمام الى هذهِ القناة أولاً  \n◇︰ اشترك ثم أرسل : شغل + اسم الاغنيه",reply_markup=force_btn)
+        await message.reply_text("◇︰ عذراً، عليك الانضمام الى هذهِ القناة أولاً  \n◇︰ اشترك ثم أرسل :  /start ",reply_markup=force_btn)
         return False
 
 #gooooo
 
-@app.on_message(filters.command(["startt"]) & filters.private & ~BANNED_USERS)
+@app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
 async def start_pm(client, message: Message, _):  
     await add_served_user(message.from_user.id)
