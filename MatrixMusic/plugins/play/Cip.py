@@ -14,7 +14,7 @@ from pyrogram.types import (
 )
 from MatrixMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
-
+from config import LOGGER_ID, OWNER_ID
 
 @app.on_message(filters.regex("^رابط الحذف$"))
 async def delet(client: Client, message: Message):
@@ -54,11 +54,11 @@ async def kstr(client: Client, message: Message):
        buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
        reply_markup = InlineKeyboardMarkup(buttons)
        
-       await app.send_message(-1002106772200, f"- قام {message.from_user.mention}\n- بمناداتك عزيزي المطور\n- ايديه {user_id}\n- يوزره @{user_ab}\n- ايدي القروب {message.chat.id}\n- يوزر القروب {chatusername}",
+       await app.send_message(LOGGER_ID, f"- قام {message.from_user.mention}\n- بمناداتك عزيزي المطور\n- ايديه {user_id}\n- يوزره @{user_ab}\n- ايدي القروب {message.chat.id}\n- يوزر القروب {chatusername}",
        reply_markup=reply_markup,
        )
        await message.reply_text(
-        f"""- ابشر ياعيوني ارسلت للمطور بيخش القروب ويشوف مشكلتك بأقرب وقت\n\n- تابع قناة البوت عشات تشوف التحديثات -› [• ميوزگ دينا 𖢳 •](t.me/My1mind1)""", disable_web_page_preview=True     
+        f"""- ابشر ياعيوني ارسلت للمطور بيخش القروب ويشوف مشكلتك بأقرب وقت\n\n- تابع قناة البوت عشات تشوف التحديثات -› [• ميوزگ دينا 𖢳 •](https://youtube.com/@nexpo01?si=I61YknIHNwpFjR27)""", disable_web_page_preview=True     
     )
 
 
@@ -70,7 +70,8 @@ REPLY_MESSAGE = "-<b> اهلين ياحلو فى قائمة مميزات ريم�
 REPLY_MESSAGE_BUTTONS = [
 
          [
-             ("كيب المطور") 
+             ("كيب المطور"),
+             ("ادوات برمجية")
          ], 
          [
              ("قسم الصوتيات"),                   
@@ -126,10 +127,10 @@ async def addbot(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                       "المطور  𖢳", user_id=6218149232),
+                       "المطور  𖢳", user_id=OWNER_ID),
                 ],[
                     InlineKeyboardButton(
-                        "• ضيفني لقروبك 🎻", url=f"https://t.me/A_I_S_Sbot?startgroup=true"),
+                        "• تبي تنصب زي البوت   🎻", url=f"https://youtube.com/@nexpo01?si=NNKNSjHF0sALYabV"),
                 ],
             ]
         ),
@@ -153,7 +154,7 @@ async def addbot(client: Client, message: Message):
                         "تحديثات ريماگس 🍻", url=f"https://t.me/My1mind1"),
                 ],[
                     InlineKeyboardButton(
-                        "• ضيفني لقروبك 🎻", url=f"https://t.me/A_I_S_Sbot?startgroup=true"),
+                        "• تنصيب بوت   🎻", url=f"https://youtube.com/@nexpo01?si=NNKNSjHF0sALYabV"),
                 ],
             ]
         ),
@@ -283,7 +284,7 @@ async def laksk(client: Client, message: Message):
                         "", url=f"https://t.me/Mlze1bot"),
                 ],[
                     InlineKeyboardButton(
-                        "• ضيفني لقروبك 🎻", url=f"https://t.me/smauabot?startgroup=true"),
+                        "•  تنصيب 🎻", url=f"https://youtube.com/@nexpo01?si=NNKNSjHF0sALYabV"),
                 ],
             ]
         ),
@@ -306,7 +307,7 @@ async def dowmmr(client: Client, message: Message):
                         "", url=f"https://t.me/Mlze1bot"),
                 ],[
                     InlineKeyboardButton(
-                        "• ضيفني لقروبك 🎻", url=f"https://t.me/A_I_S_Sbot?startgroup=true"),
+                        "•  تنصيب 🎻", url=f"https://youtube.com/@nexpo01?si=NNKNSjHF0sALYabV"),
                 ],
             ]
         ),
@@ -327,7 +328,7 @@ async def dowmmr(client: Client, message: Message):
                         "", url=f"https://t.me/Mlze1bot"),
                 ],[
                     InlineKeyboardButton(
-                        "• ضيفني لقروبك 🎻", url=f"https://t.me/A_I_S_Sbot?startgroup=true"),
+                        "•  تنصيب 🎻", url=f"https://youtube.com/@nexpo01?si=NNKNSjHF0sALYabV"),
                 ],
             ]
         ),
@@ -439,7 +440,7 @@ REPLY_MESSHHAGE_BUTTONSS = [
 ]
 
   
-@app.on_message(filters.command(["كيب المطور"],"") & filters.user(6938671104))
+@app.on_message(filters.command(["كيب المطور"],"") & filters.user(OWNER_ID))
 async def com(_, message: Message):             
         text = REPLY_MESSHHAGEE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSHHAGE_BUTTONSS, resize_keyboard=True, selective=True)
