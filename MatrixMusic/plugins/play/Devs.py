@@ -9,7 +9,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from strings.filters import command
 from MatrixMusic import app
 from random import  choice, randint
-
+from config import ASAAQ_ID
 def get_file_id(msg: Message):
     if msg.media:
         for message_type in (
@@ -38,7 +38,7 @@ def get_file_id(msg: Message):
   
 )
 async def yas(client, message):
-    usr = await client.get_chat("Mjtre7")
+    usr = await client.get_chat(ASAAQ_ID)
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"– – – – – – – – – – – – – – – – – –\n↯︙𝖣𝖾𝗏 ↬ ⦗ {name} ⦘\n↯︙𝖴𝗌𝖤𝗋 ↬ ⦗ @{usr.username} ⦘\n↯︙𝖨𝖣 ↬ ⦗ {usr.id} ⦘\n↯︙𝖡𝗂𝖮 ↬ ⦗ {usr.bio} ⦘\n– – – – – – – – – – – – – – – – – –",  
