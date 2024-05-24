@@ -22,6 +22,11 @@
         "value": "6938671104",
         "required": false
       },
+        "ASAAQ_ID": {
+        "description": "⦗ معرفه بدون @ المطـــور ⦘ ↫ مطـــور بـــوت الميـــوزك",
+        "value": "",
+        "required": false
+      },
       "STRING_SESSION": {
         "description": "⦗ V2 ⦘ ↫ كـود جلسـة الحسـاب المساعـد لـ الميـوزك",
         "value": "",
@@ -39,7 +44,7 @@
       },
       "LOGGER_ID": {
         "description": "ايـدي قروب السـجل",
-        "value": "-1002106772200",
+        "value": "",
         "required": false
       }
     },
