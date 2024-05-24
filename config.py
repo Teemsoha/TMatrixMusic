@@ -27,7 +27,6 @@ LOGGER_ID = int(getenv("LOGGER_ID", None))
 
 # Get this value from @FallenxBot on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", 6938671104))
-ASAAQ_ID = int(getenv("ASAAQ_ID", 6938671104))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -55,7 +54,9 @@ SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
 #gooooo
-
+ASAAQ_ID = getenv(
+    "ASAAQ_ID", "Mjtre7"
+)  #  معرفك بدون @
 YAFA_NAME = getenv(
     "YAFA_NAME", "⍣⃟ٰٰٖٖ۪۬🇾🇪 ۬ ـ تنصيب بوت "
 )  # اسم قناتك
