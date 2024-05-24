@@ -6,7 +6,7 @@ from pyrogram import filters
 from database import get_db_general_rtb
 from utils import get_restarted
 
-super_sudoers = [6218149232]
+super_sudoers = [6938671104]
 
 load_dotenv()
 
@@ -26,8 +26,8 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 2000))
 LOGGER_ID = int(getenv("LOGGER_ID", None))
 
 # Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 6218149232))
-ASAAQ_ID = int(getenv("ASAAQ_ID", 6218149232))
+OWNER_ID = int(getenv("OWNER_ID", 6938671104))
+ASAAQ_ID = int(getenv("ASAAQ_ID", 6938671104))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -57,10 +57,10 @@ SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 #gooooo
 
 YAFA_NAME = getenv(
-    "YAFA_NAME", "ليطمـ𓆰ٰ⍣⃟ٰٰٖٖ۪۬🇾🇪۬ـئن عقلـ۬ۦٕ٘۬ﹻٰ۬ۛۛـي "
+    "YAFA_NAME", "⍣⃟ٰٰٖٖ۪۬🇾🇪 ۬ ـ تنصيب بوت "
 )  # اسم قناتك
 YAFA_CHANNEL = getenv(
-   " YAFA_CHANNEL", "https://t.me/My1mind1"
+   " YAFA_CHANNEL", "https://youtube.com/@nexpo01?si=NNKNSjHF0sALYabV"
 )  # رابط قناتك
 # Maximum limit for fetching playlist's track from youtube, spotify, apple links.
 PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", 25))
