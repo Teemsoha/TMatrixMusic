@@ -35,14 +35,14 @@ async def zdatsr(client: Client, message: Message):
                     InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
                 ],[
                     InlineKeyboardButton(
-                        "‹ ليطمـ𓆰ٰ⍣⃟ٰٰٖٖ۪۬🇾🇪۬ـئن عقلـ۬ۦٕ٘۬ﹻٰ۬ۛۛـي� ›", url="https://t.me/My1mind1"),
+                        "‹ لتنصيب بوت ›", url="https://youtube.com/@nexpo01?si=0s_LeGwxCAUqcLRU"),
                 ],
             ]
         ),
     )
 
 
-@app.on_message(command(["مطور", "المطور"]) & filters.group)
+@app.on_message(command(["الممطور", "مممممطور"]) & filters.group)
 async def zilzal(client: Client, message: Message):
     usr = await client.get_users(OWNER_ID)
     name = usr.first_name
@@ -59,7 +59,7 @@ reply_markup=InlineKeyboardMarkup(
             [            
               InlineKeyboardButton (name, url=f"https://t.me/{usrnam}"),
             ],[
-              InlineKeyboardButton("ليطمـ𓆰ٰ⍣⃟ٰٰٖٖ۪۬🇾🇪۬ـئن عقلـ۬ۦٕ٘۬ﹻٰ۬ۛۛـي�", url="https://t.me/My1mind1"),
+              InlineKeyboardButton("⍣⃟ٰٰٖٖ۪۬🇾🇪۬ـ لتنصيب بوت �", url="https://youtube.com/@nexpo01?si=0s_LeGwxCAUqcLRU"),
             ],
           ]
        )                 
