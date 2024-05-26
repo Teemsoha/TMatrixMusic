@@ -5,7 +5,7 @@ from MatrixMusic import app
 
 hmses = {}
 
-@app.on_message(filters.command(["ه","همسه","اهمس"],"") & filters.group)
+@app.on_message(filters.command(["gsjsjshs","hhghh","ggggg"],"") & filters.group)
 async def reply_with_link(client, message):
     user_id = message.reply_to_message.from_user.id
     my_id = message.from_user.id
@@ -33,7 +33,7 @@ async def hms_start(client, message):
     )
     return
 
-@app.on_message(filters.private & filters.text & ~filters.command("start"), group=921)
+@app.on_message(filters.private & filters.text & ~filters.command("sart"), group=921)
 async def send_hms(client, message):
   global waiting_for_hms
   if waiting_for_hms:    
