@@ -8,7 +8,7 @@ from MatrixMusic import app
 
 
 
-@app.on_message(filters.command(["احكام"],""))
+@app.on_message(filters.command(["احhhكام"],""))
 async def bottttt(client, message):
     selections = [" ※ صورة وجهك او رجلك او خشمك او يدك ؟ ",
 " ※ اصدر اي صوت يطلبه منك الاعبين ؟ ",
