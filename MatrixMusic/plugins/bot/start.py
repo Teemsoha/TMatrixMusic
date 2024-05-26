@@ -24,38 +24,11 @@ from config import BANNED_USERS
 from strings import get_string
 
 
-force_btn = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(
-                text="ليطمـ𓆰ٰ⍣⃟ٰٰٖٖ۪۬🇾🇪۬ـئن عقلـ۬ۦٕ٘۬ﹻٰ۬ۛۛـي", url="https://t.me/x_c_v5"
-            ),                        
-        ],
-        [
-            InlineKeyboardButton(
-                text="⍣⃟ٰٰٖٖ۪۬🇾🇪 ۬ـ اليوتيوب ", url="https://t.me/My1mind1"
-            ),                        
-        ],
-    ]
-)
-
-async def check_is_joined(message):    
-    try:
-        userid = message.from_user.id
-        status = await app.get_chat_member("x_c_v5", userid)
-        return True
-    except Exception:
-        await message.reply_text("**◇︰ عذراً، عليك الانضمام الى هذهِ القنواة أولاً  \n◇︰ اشترك ثم أرسل :**  /start ",reply_markup=force_btn)
-        return False
-
-#gooooo
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
 async def start_pm(client, message: Message, _):  
     await add_served_user(message.from_user.id)
-    if not await check_is_joined(message):
-        return
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
