@@ -54,9 +54,13 @@ SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
 #gooooo
+CHANNEL_NAME = getenv("CHANNEL_NAME", "تحديثات دينا")
+CHANNEL_LINK = getenv("CHANNEL_LINK", "M_D_N_N")
+
 ASAAQ_ID = getenv(
-    "ASAAQ_ID", "Mjtre7"
-)  #  معرفك بدون @
+    "ASAAQ_ID", "Mjtre7" )
+
+
 YAFA_NAME = getenv(
     "YAFA_NAME", "⍣⃟ٰٰٖٖ۪۬🇾🇪 ۬ ـ تنصيب بوت "
 )  # اسم قناتك
