@@ -1,4 +1,3 @@
-from MatrixMusic.plugins.play.filters import command
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -7,7 +6,7 @@ from MatrixMusic.misc import SUDOERS
 from MatrixMusic.utils.database import autoend_off, autoend_on
 
 
-@app.on_message(command(["المغادره التلقائية", "المغادره التلقائيه"]) & SUDOERS)
+@app.on_message(filters.command(["المغادره", "المغادره التلقائيه"]) & SUDOERS)
 async def auto_end_stream(_, message: Message):
     usage = "<b>• مثــال :</b>\n\nالمغادره التلقائيه [تفعيل | تعطيل]"
     if len(message.command) != 2:
