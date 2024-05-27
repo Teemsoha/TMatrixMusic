@@ -1,0 +1,19 @@
+services:
+  - type: web
+    plan: free
+    name: TMatrixMusic
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python start
+    repo: https://github.com/Teemsoha/TMatrixMusic.git
+    branch: soha
+    autoDeploy: false
+    envVars:
+      - key: OWNER_ID
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: STRING_SESSION
+        sync: false
+      - key: LOGGER_ID
+        sync: false
