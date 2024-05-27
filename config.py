@@ -52,10 +52,16 @@ AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
 # Get this credentials from https://developer.spotify.com/dashboard
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
-
+CHANNEL_NAME = getenv(
+    "CHANNEL_NAME", "تحديثات دينا "
+)
 #gooooo
+
 ASAAQ_ID = getenv(
-    "ASAAQ_ID", "Mjtre7"
+    "ASAAQ_ID", "Mjtre7" )
+
+CHANNEL_LINK = getenv(
+    "CHANNEL_LINK", "M_D_N_N"
 )  #  معرفك بدون @
 YAFA_NAME = getenv(
     "YAFA_NAME", "⍣⃟ٰٰٖٖ۪۬🇾🇪 ۬ ـ تنصيب بوت "
