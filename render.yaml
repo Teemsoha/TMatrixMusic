@@ -4,9 +4,9 @@ services:
     name: TMatrixMusic
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python start
+    startCommand: python vree
     repo: https://github.com/Teemsoha/TMatrixMusic.git
-    branch: soha
+    branch: master
     autoDeploy: false
     envVars:
       - key: OWNER_ID
